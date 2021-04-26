@@ -31,14 +31,14 @@ ul li {
   color: var(--secondary);
   list-style-type: none;
 }
-footer {
+.nav {
   grid-row: 2;
   display: flex;
   border-top: 3px solid var(--secondary);
   position: relative;
 }
-footer::after {
-  
+.nav::after {
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
@@ -51,6 +51,7 @@ footer::after {
     var(--main) 3px
   );
   opacity: 0.7;
+  pointer-events: none;
 }
 
 .section {
@@ -62,6 +63,7 @@ footer::after {
   grid-row: 1;
   height: 100%;
   position: relative;
+  
 }
 .main::after {
   content: "";
@@ -77,17 +79,8 @@ footer::after {
     var(--main) 3px
   );
   opacity: 0.7;
+  pointer-events: none;
 }
-.overlay {
-  background: repeating-linear-gradient(
-    var(--main),
-    var(--main) 2px,
-    var(--secondary) 3px,
-    var(--secondary) 3px
-  );
-  z-index: 10;
-}
-
 .about {
   /* position: relative;*/
   height: 93vh;
