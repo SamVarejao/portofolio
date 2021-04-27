@@ -1,5 +1,5 @@
 :root {
-  --main: rgb(0, 25, 10);
+  --main: rgb(0, 15, 6);
   --secondary: rgb(60, 214, 130); /*#39ff14*/
 }
 body {
@@ -7,7 +7,7 @@ body {
   height: 100%;
   background-color: var(--main);
   display: grid;
-  grid-template-rows: 93vh auto;
+  grid-template-rows: 93vh 7vh;
   overflow-y: hidden;
 }
 
@@ -47,8 +47,8 @@ ul li {
   background: repeating-linear-gradient(
     transparent,
     transparent 2px,
-    var(--main) 3px,
-    var(--main) 3px
+    var(--main) 4px,
+    var(--main) 4px
   );
   opacity: 0.7;
   pointer-events: none;
@@ -63,7 +63,6 @@ ul li {
   grid-row: 1;
   height: 100%;
   position: relative;
-  
 }
 .main::after {
   content: "";
@@ -75,8 +74,8 @@ ul li {
   background: repeating-linear-gradient(
     transparent,
     transparent 2px,
-    var(--main) 3px,
-    var(--main) 3px
+    var(--main) 4px,
+    var(--main) 4px
   );
   opacity: 0.7;
   pointer-events: none;
@@ -88,22 +87,7 @@ ul li {
   display: grid;
   grid-template-columns: 15vw 300px 50px auto 15vw; /*margin, photo-width, space, text-div-width, margin */
   grid-template-rows: 250px 300px auto; /*title-div-height, rest-of-page-section-height */
-} /*
-.about::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background: repeating-linear-gradient(
-    transparent,
-    transparent 2px,
-    var(--main) 3px,
-    var(--main) 3px
-  );
-  opacity: 0.7;
-}*/
+}
 .aboutA {
   grid-row: 1;
   grid-column: 1 / span 5;
@@ -120,6 +104,7 @@ ul li {
 }
 .aboutB img {
   width: 100%;
+  border: 3px solid var(--secondary);
 }
 .aboutC {
   grid-row: 2;
@@ -129,23 +114,7 @@ ul li {
 .skills {
   height: 93vh;
   padding-top: 30px;
-  /* position: relative;*/
-} /*
-.skills::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background: repeating-linear-gradient(
-    transparent,
-    transparent 2px,
-    var(--main) 3px,
-    var(--main) 3px
-  );
-  opacity: 0.7;
-}*/
+}
 .skillsA {
   margin-left: auto;
   margin-right: auto;
@@ -213,6 +182,7 @@ ul li {
 }
 .thumbnail img {
   width: 100%;
+  border: 3px solid var(--secondary);
 }
 .description {
   grid-row: 2;
