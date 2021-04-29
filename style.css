@@ -1,6 +1,10 @@
+@font-face {
+  font-family: VT323;
+  src: url(./fonts/VT323-Regular.ttf);
+}
 :root {
   --main: rgb(0, 15, 6);
-  --secondary: rgb(60, 214, 130); /*#39ff14*/
+  --secondary: rgb(60, 214, 130);
 }
 body {
   margin: 0;
@@ -13,12 +17,18 @@ body {
 
 h1 {
   color: var(--secondary);
+  font-family: VT323;
+  font-size: 45px;
 }
 h2 {
   color: var(--secondary);
+  font-family: VT323;
+  font-size: 30px;
 }
 p {
   color: var(--secondary);
+  font-family: VT323;
+  font-size: 25px;
 }
 a,
 a:hover,
@@ -37,11 +47,12 @@ ul li {
   border-top: 3px solid var(--secondary);
   position: relative;
 }
-.nav a{
+.nav a {
   margin-left: 30px;
   height: 100%;
 }
-.nav a p:hover{
+
+.nav a p:hover {
   color: var(--main);
   font-weight: bold;
 }
@@ -96,40 +107,40 @@ ul li {
   grid-template-columns: 15vw 300px 50px auto 15vw; /*margin, photo-width, space, text-div-width, margin */
   grid-template-rows: 250px 200px auto; /*title-div-height, rest-of-page-section-height */
 }
-.aboutA {
+.aboutTitle {
   grid-row: 1;
   grid-column: 1 / span 5;
   height: 75%;
   background-color: var(--secondary);
   text-align: center;
 }
-.aboutA h1 {
+.aboutTitle h1 {
   color: var(--main);
 }
-.aboutB {
+.aboutPhoto {
   grid-row: 2;
   grid-column: 2;
 }
-.aboutB img {
+.aboutPhoto img {
   width: 98%;
   border: 3px solid var(--secondary);
 }
-.aboutC {
+.aboutDesc {
   grid-row: 2;
   grid-column: 4;
   margin-top: auto;
 }
-.aboutCA {
+.aboutContacts {
   background-color: var(--secondary);
   display: grid;
-  height: 60px;
+  height: 100%;
+
   grid-template-columns: 45px 45px 45px 45px auto;
 }
-.aboutCA img {
+.aboutContacts img {
   width: 100%;
-  padding: 5px;
 }
-.aboutCA p {
+.aboutContacts p {
   color: black;
   font-weight: bold;
   grid-column: 5;
@@ -140,7 +151,7 @@ ul li {
   height: 93vh;
   padding-top: 30px;
 }
-.skillsA {
+.skillsTable {
   margin-left: auto;
   margin-right: auto;
   display: grid;
@@ -150,33 +161,33 @@ ul li {
   width: 350px;
   height: 200px;
 }
-.skillsA h2 {
+.skillsTable h2 {
   color: var(--main);
 }
-.skillsA p {
+.skillsTable p {
   color: var(--secondary);
 }
-.skillsAA {
+.skillsTableTitle {
   grid-row: 1;
   grid-column: 1 / span 2;
   text-align: center;
   background-color: var(--secondary);
 }
-.skillsAB {
+.skillsCollumnA {
   grid-row: 2;
   grid-column: 1;
 }
-.skillsAB p {
+.skillsCollumnA p {
   text-align: center;
 }
-.skillsAC {
+.skillsCollumnA {
   grid-row: 2;
   grid-column: 2;
 }
-.skillsAC p {
+.skillsCollumnA p {
   text-align: center;
 }
-.skillsB {
+.skillsMisc {
   margin-left: auto;
   margin-right: auto;
   margin-top: 60px;
