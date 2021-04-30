@@ -2,10 +2,43 @@
   font-family: VT323;
   src: url(./fonts/VT323-Regular.ttf);
 }
+@keyframes backgroundBlip {
+  0% {
+    background-color: var(--main);
+  }
+  50% {
+    background-color: var(--main);
+  }
+  51% {
+    background-color: var(--secondary);
+  }
+  100% {
+    background-color: var(--secondary);
+  }
+}
+@keyframes fontBlip {
+  0% {
+    color: var(--secondary);
+    font-weight: bold;
+  }
+  50% {
+    color: var(--secondary);
+    font-weight: bold;
+  }
+  51% {
+    color: var(--main);
+    font-weight: bold;
+  }
+  100% {
+    color: var(--main);
+    font-weight: bold;
+  }
+}
 :root {
   --main: rgb(0, 15, 6);
   --secondary: rgb(60, 214, 130);
 }
+/*------------------------------------------*/
 body {
   margin: 0;
   height: 100%;
@@ -51,14 +84,28 @@ ul li {
 .nav a {
   margin-left: 30px;
   height: 100%;
+  width: 100px;
 }
-.nav p{
-  margin: 2vh 0px 0px 0px;
+.nav p {
+  margin: 0; /*this whole dance and twist was made so the p elemnt would ocuppy the whole height*/
+  padding: 2vh 0px 0px 0px; /*of the a element*/
+  height: 100%;
+}
+.nav a:hover {
+  background-color: var(--secondary);
+  animation-name: backgroundBlip;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
 }
 .nav a p:hover {
-  color: var(--main);
-  font-weight: bold;
+  animation-name: fontBlip;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
 }
+
+
 .nav::after {
   content: "";
   position: absolute;
@@ -133,9 +180,9 @@ ul li {
   grid-column: 4;
   height: 100%;
 }
-.aboutDesc p{
- margin: 0px;
- position:relative;
+.aboutDesc p {
+  margin: 0px;
+  position: relative;
 }
 
 .aboutContacts {
