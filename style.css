@@ -323,7 +323,7 @@ ul li {
   }
   .main::after {
     /*Because in this viewport the projects list is more...vertical? we need to add height to the overlay effect*/
-    height: 350vh; /*So remember to add height as the list gets bigger*/
+    height: 300vh; /*So remember to add height as the list gets bigger*/
   }
 
   .about {
