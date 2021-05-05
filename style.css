@@ -406,3 +406,36 @@ ul li {
     grid-template-rows: 150px auto;
   }
 }
+@media only screen and (max-width: 400px) {
+  .nav a {
+    margin-left: 15px;
+  }
+  .about {
+    grid-template-columns: 1fr 270px 1fr;
+  }
+  .aboutContacts {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto;
+  }
+  .aboutContacts img {
+    width: 50%;
+  }
+  .aboutContacts p {
+    grid-row: 2;
+    grid-column: 1 / span 3;
+  }
+
+  .skillsTable {
+    width: 270px;
+  }
+  .skillsMisc {
+    width: 270px;
+  }
+
+  .projects {
+    grid-template-columns: 1fr 270px 1fr; /*margin, card-width, margin*/
+  }
+  .cardTemplate {
+    grid-template-rows: 130px auto;
+  }
+}
