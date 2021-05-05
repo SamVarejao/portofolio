@@ -158,7 +158,6 @@ ul li {
 }
 /*------------------------------------------*/
 .about {
-  /* position: relative;*/
   height: 93vh;
   padding-top: 30px;
   display: grid;
@@ -261,8 +260,8 @@ ul li {
   height: auto;
   min-height: 93vh;
   display: grid;
-  grid-template-rows: 60px 1fr; /*tile-height, card-height, card-height. Just add rows as needed*/
-  grid-template-columns: 15vw 1fr 5px 1fr 15vw; /*margin, card-width, space, card-width, margin*/
+  grid-template-rows: 60px 500px; /*tile-height, card-height, card-height. Just add rows as needed*/
+  grid-template-columns: 15vw 1fr 15px 1fr 15vw; /*margin, card-width, space, card-width, margin*/
 }
 .projects h2 {
   grid-row: 1;
@@ -272,14 +271,16 @@ ul li {
 /*template for project display*/
 .cardTemplate {
   display: grid;
-  grid-template-rows: 250px auto;
+  grid-template-rows: 230px auto;
   width: 100%;
+  height: 100%;
 }
 .thumbnail {
   grid-row: 1;
 }
 .thumbnail img {
-  width: 100%;
+  width: 98%;
+  height: 100%;
   border: 3px solid var(--secondary);
 }
 .description {
@@ -294,4 +295,114 @@ ul li {
   /*position within projects grid*/
   grid-row: 2;
   grid-column: 2;
+}
+.projectB {
+  grid-row: 2;
+  grid-column: 4;
+}
+
+@media only screen and (max-width: 1100px) {
+  .about {
+    grid-template-columns: 7vw 300px 30px auto 7vw;
+    grid-template-rows: 230px 300px auto;
+  }
+
+  .projects {
+    grid-template-columns: 7vw 1fr 15px 1fr 7vw;
+  }
+}
+@media only screen and (max-width: 950px) {
+  h1 {
+    font-size: 35px;
+  }
+  h2 {
+    font-size: 25px;
+  }
+  p {
+    font-size: 20px;
+  }
+  .main::after {
+    /*Because in this viewport the projects list is more...vertical? we need to add height to the overlay effect*/
+    height: 350vh; /*So remember to add height as the list gets bigger*/
+  }
+
+  .about {
+    padding-top: 20px;
+    grid-template-columns: 1fr 500px 1fr;
+    grid-template-rows: 100px 50px 200px 30px auto;
+  }
+  .aboutTitle {
+    grid-row: 1;
+    grid-column: 1 / span 5;
+    height: 100%;
+  }
+  .aboutTitle h1 {
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+  .aboutPhoto {
+    grid-row: 3;
+    grid-column: 2;
+  }
+  .aboutPhoto img {
+    height: 98%;
+    width: 100%;
+  }
+  .aboutDesc {
+    grid-row: 5;
+    grid-column: 2;
+  }
+  .aboutContacts {
+    grid-template-columns: 30px 30px 30px 30px auto;
+  }
+  .aboutContacts img {
+    width: 70%;
+  }
+
+  .skillsMisc {
+    width: 500px;
+  }
+
+  .projects {
+    grid-template-rows: 60px 500px 500px; /*tile-height, card-height, card-height. Just add rows as needed*/
+    grid-template-columns: 1fr 500px 1fr; /*margin, card-width, margin*/
+  }
+  .projectA {
+    /*position within projects grid*/
+    grid-row: 2;
+    grid-column: 2;
+  }
+  .projectB {
+    grid-row: 3;
+    grid-column: 2;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .about {
+    grid-template-columns: 1fr 450px 1fr;
+  }
+
+  .skillsMisc {
+    width: 450px;
+  }
+
+  .projects {
+    grid-template-columns: 1fr 450px 1fr; /*margin, card-width, margin*/
+  }
+}
+@media only screen and (max-width: 550px) {
+  .about {
+    grid-template-columns: 1fr 350px 1fr;
+  }
+
+  .skillsMisc {
+    width: 350px;
+  }
+
+  .projects {
+    grid-template-columns: 1fr 350px 1fr; /*margin, card-width, margin*/
+  }
+  .cardTemplate {
+    grid-template-rows: 150px auto;
+  }
 }
