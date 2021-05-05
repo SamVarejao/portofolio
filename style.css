@@ -159,7 +159,6 @@ ul li {
 /*------------------------------------------*/
 .about {
   height: 93vh;
-  padding-top: 30px;
   display: grid;
   grid-template-columns: 15vw 300px 50px auto 15vw; /*margin, photo-width, space, text-div-width, margin */
   grid-template-rows: 250px 200px auto; /*title-div-height, rest-of-page-section-height */
@@ -327,7 +326,6 @@ ul li {
   }
 
   .about {
-    padding-top: 20px;
     grid-template-columns: 1fr 500px 1fr;
     grid-template-rows: 100px 50px 200px 30px auto;
   }
@@ -364,7 +362,7 @@ ul li {
   }
 
   .projects {
-    grid-template-rows: 60px 500px 500px; /*tile-height, card-height, card-height. Just add rows as needed*/
+    grid-template-rows: 60px 500px ;/*tile-height, card-height, card-height. Just add rows as needed*/
     grid-template-columns: 1fr 500px 1fr; /*margin, card-width, margin*/
   }
   .projectA {
