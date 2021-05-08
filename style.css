@@ -4,10 +4,10 @@
 }
 @keyframes backgroundBlip {
   0% {
-    background-color: var(--main);
+    background-color: transparent;
   }
   50% {
-    background-color: var(--main);
+    background-color: transparent;
   }
   51% {
     background-color: var(--secondary);
@@ -16,6 +16,7 @@
     background-color: var(--secondary);
   }
 }
+
 @keyframes fontBlip {
   0% {
     color: var(--secondary);
@@ -101,17 +102,14 @@ ul li {
   height: 100%;
 }
 .nav a:hover {
-  background-color: var(--secondary);
   animation-name: backgroundBlip;
   animation-duration: 0.5s;
   animation-iteration-count: infinite;
-  animation-delay: 0s;
 }
 .nav a p:hover {
   animation-name: fontBlip;
   animation-duration: 0.5s;
   animation-iteration-count: infinite;
-  animation-delay: 0s;
 }
 .nav::after {
   content: "";
@@ -392,6 +390,16 @@ ul li {
   body {
     height: calc(var(--vh, 1vh) * 100);
     grid-template-rows: 93% auto;
+  }
+  .nav a:hover {
+    animation-name: backgroundBlip;
+    animation-duration: 0.5s;
+    animation-iteration-count: 4;
+  }
+  .nav a p:hover {
+    animation-name: fontBlip;
+    animation-duration: 0.5s;
+    animation-iteration-count: 4;
   }
   .about {
     grid-template-columns: 1fr 350px 1fr;
